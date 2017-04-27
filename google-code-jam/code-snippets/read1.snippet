@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read 1</Title>
+      <Author>szmate1618</Author>
+      <Description>Reading 1 value through the specified StreamReader</Description>
+      <Shortcut>r1</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Desired data type</ToolTip>
+          <Default>Int64</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>T</Default>
+        </Literal>
+        <Object>
+          <ID>StreamReader</ID>
+          <Type>System.IO.StreamReader</Type>
+          <ToolTip>Reference to an open StreamReader</ToolTip>
+          <Default>sr</Default>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[$type$ $name$ = Convert.To$type$($StreamReader$.ReadLine());]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

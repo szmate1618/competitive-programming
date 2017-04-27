@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read 2</Title>
+      <Author>szmate1618</Author>
+      <Description>Reading 2 values through the specified StreamReader</Description>
+      <Shortcut>r2</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Desired data type</ToolTip>
+          <Default>Int64</Default>
+        </Literal>
+        <Literal>
+          <ID>name1</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>N</Default>
+        </Literal>
+        <Literal>
+          <ID>name2</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>M</Default>
+        </Literal>
+        <Object>
+          <ID>StreamReader</ID>
+          <Type>System.IO.StreamReader</Type>
+          <ToolTip>Reference to an open StreamReader</ToolTip>
+          <Default>sr</Default>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[string[] $name1$$name2$ = $StreamReader$.ReadLine().Split();]]>
+            $type$ $name1$ = Convert.To$type$($name1$$name2$[0]);
+            $type$ $name2$ = Convert.To$type$($name1$$name2$[1]);
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

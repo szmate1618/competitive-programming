@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Read 10</Title>
+      <Author>szmate1618</Author>
+      <Description>Reading 10 values through the specified StreamReader</Description>
+      <Shortcut>r10</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Desired data type</ToolTip>
+          <Default>Int64</Default>
+        </Literal>
+        <Literal>
+          <ID>name1</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>A</Default>
+        </Literal>
+        <Literal>
+          <ID>name2</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>B</Default>
+        </Literal>
+        <Literal>
+          <ID>name3</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>C</Default>
+        </Literal>
+        <Literal>
+          <ID>name4</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>D</Default>
+        </Literal>
+        <Literal>
+          <ID>name5</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>E</Default>
+        </Literal>
+        <Literal>
+          <ID>name6</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>F</Default>
+        </Literal>
+        <Literal>
+          <ID>name7</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>G</Default>
+        </Literal>
+        <Literal>
+          <ID>name8</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>H</Default>
+        </Literal>
+        <Literal>
+          <ID>name9</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>I</Default>
+        </Literal>
+        <Literal>
+          <ID>name10</ID>
+          <ToolTip>Desired variable name</ToolTip>
+          <Default>J</Default>
+        </Literal>
+        <Object>
+          <ID>StreamReader</ID>
+          <Type>System.IO.StreamReader</Type>
+          <ToolTip>Reference to an open StreamReader</ToolTip>
+          <Default>sr</Default>
+        </Object>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[string[] $name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$ = $StreamReader$.ReadLine().Split();]]>
+            $type$ $name1$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[0]);
+            $type$ $name2$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[1]);
+            $type$ $name3$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[2]);
+            $type$ $name4$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[3]);
+            $type$ $name5$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[4]);
+            $type$ $name6$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[5]);
+            $type$ $name7$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[6]);
+            $type$ $name8$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[7]);
+            $type$ $name9$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[8]);
+            $type$ $name10$ = Convert.To$type$($name1$$name2$$name3$$name4$$name5$$name6$$name7$$name8$$name9$$name10$[9]);
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
