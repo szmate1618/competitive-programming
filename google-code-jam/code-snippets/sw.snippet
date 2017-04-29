@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>sw</Title>
+			<Shortcut>sw</Shortcut>
+			<Description>Code snippet for sw.WriteLine</Description>
+			<Author>Microsoft Corporation, modified by szmate1618</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Object>
+					<ID>StreamWriter</ID>
+					<Type>System.IO.StreamWriter</Type>
+					<ToolTip>Reference to an open StreamWriter</ToolTip>
+					<Default>sw</Default>
+				</Object>
+				<Literal>
+					<ID>solution</ID>
+					<ToolTip>Solution to print</ToolTip>
+					<Default>"Correct solution goes here"</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[$StreamWriter$.WriteLine("Case #{0}: {1}", i + 1, $solution$);]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
