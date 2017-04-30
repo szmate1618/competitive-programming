@@ -41,12 +41,9 @@ namespace ProblemX
             return file;
         }
 
-        static void OpenInNotepad(String path)
+        static void OpenInDefaultEditor(String path)
         {
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.FileName = @"C:\Program Files (x86)\Notepad++\notepad++.exe";
-            startInfo.Arguments = path;
-            System.Diagnostics.Process.Start(startInfo);
+            System.Diagnostics.Process.Start(path);
         }
         #endregion
 
@@ -83,7 +80,7 @@ namespace ProblemX
 
             Console.WriteLine("DONE - press any key to escape");
             Console.ReadKey();
-            OpenInNotepad(((FileStream)(sw.BaseStream)).Name);
+            OpenInDefaultEditor(((FileStream)(sw.BaseStream)).Name);
             sr.Close();
             sw.Close();
         }
