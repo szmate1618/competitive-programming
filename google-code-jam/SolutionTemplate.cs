@@ -56,18 +56,18 @@ namespace ProblemX
         static void Main(string[] args)
         {
             StreamReader sr = new StreamReader("in.txt");
-            //StreamReader sr = new StreamReader(getLatestInput(downloadsFolder, problem, "small"));
-            //StreamReader sr = new StreamReader(getLatestInput(downloadsFolder, problem, "large"));
+            //StreamReader sr = new StreamReader(GetLatestInput(downloadsFolder, problem, "small"));
+            //StreamReader sr = new StreamReader(GetLatestInput(downloadsFolder, problem, "large"));
             StreamWriter sw = new StreamWriter("out.txt");
 
-            /*Int64*/ T = Convert.ToInt64(sr.ReadLine());
+            T = Convert.ToInt64(sr.ReadLine());
             for (int i = 0; i < T; i++)
             {
                 string[] NM = sr.ReadLine().Split();
-                /*Int64*/ N = Convert.ToInt64(NM[0]);
-                /*Int64*/ M = Convert.ToInt64(NM[1]);
+                N = Convert.ToInt64(NM[0]);
+                M = Convert.ToInt64(NM[1]);
 
-                /*Int64[]*/ Qi = sr.ReadLine().Split().Select(x => Convert.ToInt64(x)).ToArray();
+                Qi = sr.ReadLine().Split().Select(x => Convert.ToInt64(x)).ToArray();
 
                 for (int j = 0; j < N; j++)
                 {
