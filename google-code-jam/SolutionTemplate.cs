@@ -28,7 +28,7 @@ namespace ProblemX
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("en-US");
         }
 
-        static String getLatestInput(String inputFolder, String problem, String size)
+        static String GetLatestInput(String inputFolder, String problem, String size)
         {
             // This may be a little slow, so ideally the inputFolder should only contain the actual input files.
             DirectoryInfo directory = new DirectoryInfo(inputFolder);
@@ -39,6 +39,14 @@ namespace ProblemX
                 .Last().FullName;
             Console.WriteLine("Using {0} as input.", file);
             return file;
+        }
+
+        static void OpenInNotepad(String path)
+        {
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.FileName = @"C:\Program Files (x86)\Notepad++\notepad++.exe";
+            startInfo.Arguments = path;
+            System.Diagnostics.Process.Start(startInfo);
         }
         #endregion
 
@@ -73,10 +81,11 @@ namespace ProblemX
                 
             }
 
-            sr.Close();
-            sw.Close();
             Console.WriteLine("DONE - press any key to escape");
             Console.ReadKey();
+            OpenInNotepad(((FileStream)(sw.BaseStream)).Name);
+            sr.Close();
+            sw.Close();
         }
     }
 }
